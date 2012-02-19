@@ -54,7 +54,6 @@ Before implementing the system take some time for the following:
 * How you could implement a solution that allows for multiple solutions (e.g. warning message, raise an error, stop execution).
 
 
-
 ### Reading
 
 * [Monkeypatching is Destroying Ruby](http://avdi.org/devblog/2008/02/23/why-monkeypatching-is-destroying-ruby/)
