@@ -2,10 +2,6 @@
 
 Monkey-patching is a powerful tool in Ruby at your disposal. And ["with great power comes great responsibility"](http://en.wikipedia.org/wiki/Uncle_Ben#.22With_great_power_comes_great_responsibility.22). It gets a bad name because of the often unintended confusion and damage that it can cause within your own code and code other people have implemented. 
 
-Monkey-patching is an important lesson in the world of 
-
-An important
-
 
 ### Exercise
 
@@ -13,14 +9,21 @@ The objective of the exercise is to accomplish the following:
 
 #### Understand the Problem
 
-First and foremost is to understand how you can monkey-patch. During the first part of the exercise spend some time discussing and implementing a few solutions that employ monkey-patching. 
+First and foremost is to understand how you can monkey-patch.
+
+Implement a new `#empty?` method on [String](http://rubydoc.info/stdlib/core/1.9.3/String) which returns `true` when the string contains no characters or all whitespace characters; returning `false` otherwise.
+
+During the first part of the exercise spend some time discussing and implementing a few solutions that employ monkey-patching.
 
 #### Address the Problem
 
-The second object is to take your initial implementations and perform them more `safely` by performing the following when applying your monkey patch: 
+The second objective is to take your initial implementations and re-implement or supplement your implementation so that it done more **safely**. Discuss what you might do to make your implementation more **safe**.
+
+Some possible actions:
 
 * Documentation
-* Show a warning message
+* Show a warning message when first monkey-patched
+* Show a warning message on every execution
 * Raise an error
 * Stop execution
 * Rename the original method
@@ -32,9 +35,10 @@ Ruby provides a few ways to monkey-patch functionality because of it's Open Clas
 
 Discuss what you liked and disliked about the various implementations and solutions in various contexts.
 
-* In a command-line tool
-* In a Rails application
-* In a Ruby gem
+* A command-line tool
+* A background application
+* A Rails application
+* A Ruby gem
 
 Discuss in which situations, methods you may be overriding or contexts you may be operating in, would affect your choice in solution. 
 
