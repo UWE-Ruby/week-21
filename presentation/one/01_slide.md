@@ -19,7 +19,7 @@ Re-implement or supplement your implementation so that it is done more **safely*
 !SLIDE countdown
 
 ## Monkey-patch `String#empty?`
-## Fortify your implementation to make it more **safe**
+## Implement a **safe** strategy
 
 <!-- Countdown dashboard start -->
 <div id="countdown_dashboard" style="margin-left: 372px; width: 350px">
@@ -69,7 +69,32 @@ $('#countdown_dashboard').countDown({
 
 ## Would your implementation change in:
 
-* A command-line tool
-* A background application
-* A Rails application
-* A Ruby gem
+* overriding Ruby's core functionality
+* a new method on a prominent class
+* a new method on a not so prominent class
+
+!SLIDE bullets incremental
+
+## Would your implementation change in:
+
+* overriding a gem's functionality
+* a new method on a prominent class
+* a new method on a not so prominent class
+
+!SLIDE bullets incremental
+
+## Would your implementation change in:
+
+* one-off script
+* project with few dependencies
+* project with many dependencies
+
+!SLIDE bullets incremental
+
+## Would your implementation change in:
+
+* command-line tool
+* background application
+* Rails application
+* Ruby gem
+
