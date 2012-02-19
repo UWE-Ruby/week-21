@@ -19,40 +19,29 @@ During the first part of the exercise spend some time discussing and implementin
 
 The second objective is to take your initial implementations and re-implement or supplement your implementation so that it done more **safely**. Discuss what you might do to make your implementation more **safe**.
 
-Some possible actions:
-
-* Documentation
-* Show a warning message when first monkey-patched
-* Show a warning message on every execution
-* Raise an error
-* Stop execution
-* Rename the original method
-* Rename the monkey-patched method
-
 ### Exercise Retrospective
 
-Ruby provides a few ways to monkey-patch functionality because of it's Open Classes. 
+Ruby provides a few ways to monkey-patch because of it's Open Classes. Discuss what you liked and disliked about your implementations.
 
-Discuss what you liked and disliked about the various implementations and solutions in various contexts.
+Would you change your solution in the follow circumstances:
+
+* overriding Ruby's core functionality
+* appending a new method on a prominent class in the Ruby's core language
+* appending a new method on a not so prominent class in the Ruby's core language
+
+Would your solution change if this code lived in a different context?
 
 * A command-line tool
 * A background application
 * A Rails application
 * A Ruby gem
-
-Discuss in which situations, methods you may be overriding or contexts you may be operating in, would affect your choice in solution. 
+* A one-off script
+* A project with few dependencies
+* A project with many dependencies
 
 ### Further Exercise
 
-Your solution likely monkey-patched functionality for one method. The objective of this further exercise would be to implement a solution that would allow you to more safely monkey-patch any class or object with any method.
-
-#### Understand the Problem
-
-Before implementing the system take some time for the following:
-
-* What components you would need to make this system more modular
-* How you could implement a solution that allows for multiple solutions (e.g. warning message, raise an error, stop execution).
-
+The solution of this exercise only requires that you implement one method method for one class. How might you develop a solution that allows you to more easily monkey-patch any class with any method with the same safety strategy?
 
 ### Reading
 
