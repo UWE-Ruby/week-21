@@ -45,7 +45,8 @@ The solution of this exercise only requires that you implement one method method
 
 ### Reading
 
-* [Monkeypatching is Destroying Ruby](http://avdi.org/devblog/2008/02/23/why-monkeypatching-is-destroying-ruby/)
-* [Followup to "Monkeypatching is Destroying Ruby"](http://avdi.org/devblog/2008/02/25/followup-to-monkeypatching-is-destroying-ruby/)
+* Ruby Metaprogramming pages 27 - 47
+* Ruby Metaprogramming pages 152 - 156
 * Ruby Metaprogramming pages 232 - 237
+
 
