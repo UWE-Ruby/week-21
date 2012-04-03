@@ -41,7 +41,20 @@ Would your solution change if this code lived in a different context?
 
 ### Further Exercise
 
-The solution of this exercise only requires that you implement one method method for one class. How might you develop a solution that allows you to more easily monkey-patch any class with any method with the same safety strategy?
+The solution of this exercise only requires that you implement **one method method** for **one class**. How might you develop a solution that allows you to more easily monkey-patch **any class** with **multiple methods** with the same safety strategy?
+
+* How could you make a [gist](https://gist.github.com/) of a pattern that you
+  could copy and paste into a new project?
+
+* Ruby's `Module` has an method, [included](http://rubydoc.info/stdlib/core/1.9.3/Module:included), which is 
+  called when the module has been used by a class. How could you use that to
+  ensure methods are not overridden?
+
+* Ruby's `Module` has a method called 
+  [define_method](http://rubydoc.info/stdlib/core/1.9.3/Module:define_method)
+  which allows you to define a method dynamically within code. How could that be
+  used to add a method, while ensuring not to override existing methods?
+
 
 ### Reading
 
