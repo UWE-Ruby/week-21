@@ -13,7 +13,20 @@
 ## `methods`
 
 "abc".methods.sort
+
+## 
+
 "abc".methods.grep /empty\?/
+
+!SLIDE quote
+
+## What is the difference between these two?
+
+"abc".respond_to? :empty? # => true
+
+## 
+
+String.respond_to? :empty # => false
 
 !SLIDE quote
 
@@ -21,14 +34,14 @@
 
 String.instance_methods
 
-!SLIDE
-
+    @@@ Ruby
     "abc".methods == String.instance_methods
 
 !SLIDE quote
 
 ## Open Classes
-
+    
+    @@@ Ruby
     class String
       def to_vhs
         "vhs:#{self}"
@@ -40,12 +53,32 @@ String.instance_methods
     end
     
     "abc".respond_to? :to_vhs
-    String.new.respond_to? :to_betamax
+    String.instance_methods.
+                        include? :to_betamax
+
+!SLIDE quote
+  
+## Optional Parameters
+    
+    @@@ Ruby
+    class String
+      def empty?(ignore_whitespace = false)
+        
+        if ignore_whitespace
+          self.strip == ""
+        else
+          self == ""
+        end
+        
+      end
+    end
+  
     
 !SLIDE quote
 
 ## Module is for Sharing!
-
+    
+    @@@ Ruby
     module VideoFormats
       def to_vhs ; "vhs:#{self}" ; end
       def to_betamax ; "beta:#{self}" ; end
@@ -55,11 +88,27 @@ String.instance_methods
       include VideoFormats
     end
 
+
+!SLIDE quote
+
+## However, this does not work!
+    
+    @@@ Ruby
+    module Overrides
+      def empty?
+        strip != ""
+      end
+    end
+    
+    class String
+      include Overrides
+    end
+
 !SLIDE quote
 
 ## Module is for Caring!
 
-
+    @@@ Ruby
     module UWRuby
       module VideoFormats
         def to_vhs ; "vhs:#{self}" ; end
@@ -70,22 +119,23 @@ String.instance_methods
         include VideoFormats
       end
       
-      puts String.new("abc").to_vhs
-      puts String.instance_methods.include?(:to_vhs)
-      puts ::String.new.respond_to?(:to_vhs)
+      String.new("abc").to_vhs
+      String.instance_methods.include?(:to_vhs)
+      ::String.new.respond_to?(:to_vhs)
     end
 
 !SLIDE quote
 
 # What the hell is `::`?
-
+    
+    @@@ Ruby
     module UWRuby
       #...
       class String < ::String
         include VideoFormats
       end
       #...
-      puts ::String.new.respond_to?(:to_vhs)
+      ::String.new.respond_to?(:to_vhs)
     end
 
 !SLIDE quote
@@ -103,7 +153,8 @@ String.instance_methods
 !SLIDE quote
 
 ## Module is for Namespacing!
-
+    
+    @@@ Ruby
     module UWRuby
       module VideoFormats ; end
       class String ; end
@@ -119,14 +170,15 @@ String.instance_methods
 !SLIDE quote
 
 ## Between Constants
-
-UWRuby::String.new.respond_to?(:to_vhs)
+    @@@ Ruby
+    UWRuby::String.new.respond_to?(:to_vhs)
 
 ## Equivalency
 
-module UWRuby
-  String.new.respond_to?(:to_vhs)
-end
+    @@@ Ruby
+    module UWRuby
+      String.new.respond_to?(:to_vhs)
+    end
 
 !SLIDE quote
 
@@ -145,7 +197,8 @@ Gives you methods like `puts`, `warn`, `exit`, `raise`, and `fail`
 ## Exceptional Ruby
 
 An elegant way to fail!
-
+    
+    @@@ Ruby
     if $DEBUG
       module Kernel
         def warn(message) 
@@ -158,6 +211,7 @@ An elegant way to fail!
 
 ## Around Alias
 
+    @@@ Ruby
     class String
       alias :old_reverse :reverse
 
@@ -170,3 +224,19 @@ An elegant way to fail!
     "abc".reverse
     "abc".old_reverse
 
+!SLIDE
+
+## Around Alias
+    
+    @@@ Ruby
+    class String
+      alias_method :old_reverse, :reverse
+
+      def reverse
+        "[#{old_reverse}]"
+      end
+
+    end
+
+    "abc".reverse
+    "abc".old_reverse
