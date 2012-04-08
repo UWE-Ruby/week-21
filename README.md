@@ -11,17 +11,24 @@ The objective of the exercise is to accomplish the following:
 
 First and foremost is to understand how you can monkey-patch.
 
-Implement a new `#empty?` method on [String](http://rubydoc.info/stdlib/core/1.9.3/String) which returns `true` when the string contains no characters or all whitespace characters; returning `false` otherwise.
+Implement a new `#empty?` method on
+[String](http://rubydoc.info/stdlib/core/1.9.3/String) which returns `true` when
+the string contains no characters or all whitespace characters; returning
+`false` otherwise.
 
-During the first part of the exercise spend some time discussing and implementing a few solutions that employ monkey-patching.
+During the first part of the exercise spend some time discussing and
+implementing monkey-patching solution.
 
 #### Address the Problem
 
-The second objective is to take your initial implementations and re-implement or supplement your implementation so that it done more **safely**. Discuss what you might do to make your implementation more **safe**.
+The second objective is to take your initial implementations and re-implement or
+supplement your implementation so that it done more **safely**. Discuss what you
+might do to make your implementation more **safe**.
 
 ### Exercise Retrospective
 
-Ruby provides a few ways to monkey-patch because of it's Open Classes. Discuss what you liked and disliked about your implementations.
+Ruby provides a few ways to monkey-patch because of it's Open Classes. Discuss
+what you liked and disliked about your implementations.
 
 Would you change your solution in the follow circumstances:
 
@@ -41,12 +48,16 @@ Would your solution change if this code lived in a different context?
 
 ### Further Exercise
 
-The solution of this exercise only requires that you implement **one method method** for **one class**. How might you develop a solution that allows you to more easily monkey-patch **any class** with **multiple methods** with the same safety strategy?
+The solution of this exercise only requires that you implement **one method
+method** for **one class**. How might you develop a solution that allows you to
+more easily monkey-patch **any class** with **multiple methods** with the same
+safety strategy?
 
 * How could you make a [gist](https://gist.github.com/) of a pattern that you
   could copy and paste into a new project?
 
-* Ruby's `Module` has an method, [included](http://rubydoc.info/stdlib/core/1.9.3/Module:included), which is 
+* Ruby's `Module` has an method,
+  [included](http://rubydoc.info/stdlib/core/1.9.3/Module:included), which is
   called when the module has been used by a class. How could you use that to
   ensure methods are not overridden?
 
