@@ -46,6 +46,12 @@ Would your solution change if this code lived in a different context?
 * A project with few dependencies
 * A project with many dependencies
 
+### Reading
+
+* [Ruby Metaprogramming](http://pragprog.com/book/ppmetr/metaprogramming-ruby) pages 27 - 47
+* [Ruby Metaprogramming](http://pragprog.com/book/ppmetr/metaprogramming-ruby) pages 152 - 156
+* [Ruby Metaprogramming](http://pragprog.com/book/ppmetr/metaprogramming-ruby) pages 232 - 237
+
 ### Further Exercise
 
 The solution of this exercise only requires that you implement **one method
@@ -65,12 +71,3 @@ safety strategy?
   [define_method](http://rubydoc.info/stdlib/core/1.9.3/Module:define_method)
   which allows you to define a method dynamically within code. How could that be
   used to add a method, while ensuring not to override existing methods?
-
-
-### Reading
-
-* Ruby Metaprogramming pages 27 - 47
-* Ruby Metaprogramming pages 152 - 156
-* Ruby Metaprogramming pages 232 - 237
-
-
