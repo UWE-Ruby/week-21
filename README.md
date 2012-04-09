@@ -44,13 +44,27 @@ Would your solution change if this code lived in a different context?
 * A Ruby gem
 * A one-off script
 * A project with few dependencies
-* A project with many dependencies
+* A projectct with many dependencies
 
 ### Reading
 
-* [Ruby Metaprogramming](http://pragprog.com/book/ppmetr/metaprogramming-ruby) pages 27 - 47
-* [Ruby Metaprogramming](http://pragprog.com/book/ppmetr/metaprogramming-ruby) pages 152 - 156
-* [Ruby Metaprogramming](http://pragprog.com/book/ppmetr/metaprogramming-ruby) pages 232 - 237
+* [Ruby Metaprogramming](http://pragprog.com/book/ppmetr/metaprogramming-ruby)
+
+    > Chapter 1 - Sections 1.1 through Sections 1.4
+    > 
+    > PDF pages 27 - 46
+    
+* [Ruby Metaprogramming](http://pragprog.com/book/ppmetr/metaprogramming-ruby) 
+
+    > Chapter 4 - Section 4.6 Aliases through "Two Words of Warning"
+    > 
+    > PDF pages 152 - 156
+
+* [Ruby Metaprogramming](http://pragprog.com/book/ppmetr/metaprogramming-ruby) 
+
+    > Chapter 9 - Section 9.2 Defusing Monkeypatches
+    > 
+    > PDF pages 232 - 237
 
 ### Further Exercise
 
